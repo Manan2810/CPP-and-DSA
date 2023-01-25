@@ -28,7 +28,6 @@ int main()
             {
                 arr[j]=arr[j+1];  
                 n--;
-                j++;
            
              }
         }    
