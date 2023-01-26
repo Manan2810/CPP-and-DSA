@@ -31,6 +31,6 @@ int main()
     }
     for(int i=0;i<n-count;i++)
     {
-        cout<<arr[i];
+        cout<<arr[i]<<endl;
     }
 }
