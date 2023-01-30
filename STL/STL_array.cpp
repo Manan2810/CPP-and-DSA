@@ -12,4 +12,12 @@ int main()
     {
         cout<<a[i]<<endl;
     }
+    //printing element at index 2
+    cout<<"element at index 2 is :- "<<a.at(2);
+    cout<<endl;
+    //check whether a given array is empty or not??
+    cout<<"array empty or not ? "<<a.empty();
+    //printing the first and last element of the array
+    cout<<"first element "<<a.front()<<endl;
+    cout<<"last element ? "<<a.back();
 }
