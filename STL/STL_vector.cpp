@@ -17,6 +17,7 @@ int main()
     v.push_back(3);
     cout<<"total memory allocated to the vector :- "<<v.capacity()<<endl;
     cout<<"size of vector v is "<<v.size()<<endl;
+    v.push_back(4);
     //here we noticed that the vector doubles up its size if it runs short of space.
 
     cout<<"element at index 2 "<<v.at(2)<<endl;
@@ -30,12 +31,12 @@ int main()
     }
 
     //priting the elements of the vector after popping
-    cout<<"printing elements after poping"<<endl;
-    v.pop_back();
-    for(int i:v)
-    {
-        cout<<i<<endl;
-    }
+    // cout<<"printing elements after poping"<<endl;
+    // v.pop_back();
+    // for(int i:v)
+    // {
+    //     cout<<i<<endl;
+    // }
 
     // //size before clearing the vector
     // cout<<v.size()<<endl;
@@ -53,4 +54,6 @@ int main()
         cout<<i<<endl;
     }
 
+    //printing maximum size of the vector
+    cout<<"Max size is "<<v.max_size()<<endl;
 }
