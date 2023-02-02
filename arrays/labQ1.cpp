@@ -1,3 +1,4 @@
+//Ques to print all the pairs of array elements where index i is less than j and Arr[i]>Arr[j]
 #include<iostream>
 using namespace std;
 
