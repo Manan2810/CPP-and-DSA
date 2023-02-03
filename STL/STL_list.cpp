@@ -1,7 +1,6 @@
 //list-implementation done using concepts of doubly linked list
 #include<iostream>
 #include<list>
-#include<string>
 using namespace std;
 int main()
 {
@@ -43,18 +42,5 @@ int main()
     {
         cout<<i<<endl;
     }
-
-    //entering multiple values in a list using for loop
-    int n;
-    cin>>n;
-    list<int> m;
-    cout<<m.max_size();
-    list<int> u;
-    for(int i=1;i<=n;i++)
-    {
-        m.push_back(i*2);
-        u.push_front(i*3);
-    }
-    cout<<endl;
     
 }
