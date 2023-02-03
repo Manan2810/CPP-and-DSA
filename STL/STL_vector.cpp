@@ -55,5 +55,6 @@ int main()
     }
 
     //printing maximum size of the vector
-    cout<<"Max size is "<<v.max_size()<<endl;
+    cout<<"Max size is "<<v.max_size()<<endl;//tells the maximum number of elements that can be stored in the vector
+    
 }
