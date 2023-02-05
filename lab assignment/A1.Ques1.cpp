@@ -36,7 +36,7 @@ void Insert(int arr[],int N,int key,int index)
     }
 }
 
-int  Delete(int arr[],int N,int pos)
+int Delete(int arr[],int N,int pos)
 {
     for(int i=pos;i<N;i++)
     {
@@ -45,7 +45,7 @@ int  Delete(int arr[],int N,int pos)
         arr[i]=arr[i+1];
         N--;
     }
-    return arr;
+    return ;
     
 }
 
