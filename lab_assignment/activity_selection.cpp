@@ -1,4 +1,4 @@
-//activity selectipn question
+//activity selection question
 #include<iostream>
 using namespace std;
 int main()
