@@ -23,19 +23,38 @@ int main()
     // cout<<*(2+arr)<<endl;
 
     // ~difference between a pointer and an array
-    int arr[10];
-    cout<<sizeof(arr)<<endl;
-    int *ptr=&arr[0];
-    cout<<sizeof(ptr)<<endl;
-    cout<<sizeof(*ptr)<<endl;
-    cout<<sizeof(&ptr)<<endl;
-    cout<<sizeof(&arr[1])<<endl;
-    cout<<sizeof(*arr)<<endl;
+    // int arr[10];
+    // cout<<sizeof(arr)<<endl;
+    // int *ptr=&arr[0];
+    // cout<<sizeof(ptr)<<endl;
+    // cout<<sizeof(*ptr)<<endl;
+    // cout<<sizeof(&ptr)<<endl;
+    // cout<<sizeof(&arr[1])<<endl;
+    // cout<<sizeof(*arr)<<endl;
 
-    cout<<endl;
-    char ch='a';
-    ch++;
-    cout<<ch;
+    // cout<<endl;
+    // char ch='a';
+    // ch++;
+    // cout<<ch;
+
+    // int a[20]={1,2,3,5};
+    // cout<<&a[0]<<endl;
+    // cout<<&a<<endl;
+    // cout<<a<<endl;
+
+    // int *p=&a[0];
+    // cout<<&p<<endl;
+    // cout<<p<<endl;
+    // cout<<*p<<endl;
+
+    int arr[10];
+    // will give an error
+    // arr=arr+1;
+
+    int *p=&arr[0];
+    cout<<p<<endl;
+    p=p+1;
+    cout<<p;
 
 
 }
