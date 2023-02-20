@@ -95,3 +95,10 @@
  
 // fprintf('Maximum value of given objective function is %d',M) 
 // fprintf('\n Minimum value of given objective function is %d',m)
+
+// ~ router code 
+// 1. show ip interface brief
+// 2. configure terminal
+// 3. interface fa0/0
+// 4. ip address <ip address of router> class type in 255.255.255.0 format
+// 5. ping ip address of computer
