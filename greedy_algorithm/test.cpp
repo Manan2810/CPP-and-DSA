@@ -102,4 +102,5 @@
 // 3. interface fa0/0
 // 4. ip address <ip address of router> class type in 255.255.255.0 format
 // 5. no shutdown
-// 5. ping ip address of computer
+// 6. control+z
+// 7. ping ip address of computer
