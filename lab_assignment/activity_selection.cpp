@@ -1,83 +1,81 @@
-//activity selection question
 #include<iostream>
 using namespace std;
+
 int main()
 {
-    int n;
-    cout<<"input the number of activities ";
-    cin>>n;
-    char N;
-    float start[100];
-    float end[100];
-    int count=1;
-    int counting[100];
-    int i=1;
+    int N;
+    cout<<"enter the number of activities ";
+    cin>>N;
+    int Activity[N];
+    int Start[N];
+    int Finish[N];
 
-    cout<<"enter the starting and ending time of the activity"<<endl;
-    for(int i=1;i<=n;i++)
+    // cout<<"enter the Activity"<<endl;
+    for(int i=1;i<=N;i++)
     {
-        cout<<"starting time of activity "<<i<<" ";
-        cin>>start[i];
-        cout<<"ending time of activity "<<i<<" ";
-        cin>>end[i];
+        Activity[i]=i;
+    }
+    cout<<"enter the start time"<<endl;
+    for(int i=1;i<=N;i++)
+    {
+        cin>>Start[i];
+    }
+    cout<<endl;
+    cout<<"enter the finish time"<<endl;
+    for(int i=1;i<=N;i++)
+    {
+        cin>>Finish[i];
     }
 
-    // for(int i=1;i<=n;i++)
-    // {
-    //     for(int j=i+1;j<=n;j++)
-    //     {
-    //         if(end[i]<=end[j])
-    //         {
-    //             cout<<"activity can be scheduled";
-    //             ++count;
-    //             cin>>counting[i];
-
-    //         }
-    //         else{
-    //             cout<<"activities cannot be scheuled";
-    //         }
-    //     }
-    // }
-
-
-
-
-
-
-
-    do
+    for(int i=1;i<=N;i++)
     {
-       if(i>1)
-       {
-        for(int i=1;i<=n;i++)
+        for(int j=1;j<=N-i;j++)
+        {
+            if(Finish[j]>Finish[j+1])
             {
-                for(int j=i+1;j<=n;j++)
-                {
-                    if(end[i]<=start[j])
-                    {
-                        cout<<"activity can be scheduled"<<endl;
-                        ++count;
-                        counting[i]=count;
-
-                    }
-                    else{
-                        cout<<"activities cannot be scheuled"<<endl;
-                    }
-                }
+                swap(Activity[j],Activity[j+1]);
+                swap(Start[j],Start[j+1]);
+                swap(Finish[j],Finish[j+1]);
             }
-       }
-       else{
-        cout<<"activity can be scheduled"<<endl;
-       }
-       i++;
-       count=1;
-        
-        cout<<"do you want to enter more activities ";
-        cin>>N;
-    }while((N=='y'|| N=='Y')&& i<=n);
-
-    for(int i;i<=n;i++)
-    {
-        cout<<counting[i]<<endl;
+        }
     }
+    cout<<"Activity after sorting"<<endl;
+    for(int i=1;i<=N;i++)
+    {
+        cout<<Activity[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Start time after sorting"<<endl;
+    for(int i=1;i<=N;i++)
+    {
+        cout<<Start[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Finish time after sorting"<<endl;
+    for(int i=1;i<=N;i++)
+    {
+        cout<<Finish[i]<<" ";
+    }
+    cout<<endl;
+   int m,o;
+    // ^ problem solution
+     m = 1;
+    cout << m << " ";
+ 
+    // Consider rest of the activities
+    for (o = 2; o <= N; o++) 
+    {
+        // If this activity has start time greater than or
+        // equal to the finish time of previously selected
+        // activity, then select it
+        if (Start[o] >= Finish[m])
+        {
+
+            cout << o << " ";
+            cout<<Start[o]<<" "<<Finish[o];
+            m = o;
+        }
+    }
+
+
 }
