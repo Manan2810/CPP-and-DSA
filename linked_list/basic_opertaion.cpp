@@ -88,8 +88,23 @@ void Delete_from_firstPosition(struct Node*p)
 
 }
 
-
-
+struct Node* reverseList(struct Node *first)
+{
+        // code here
+        // return head of reversed list
+        struct Node *previous=NULL;
+        struct Node *next=NULL;
+        struct Node *current= first;
+        while(current!=NULL)
+        {
+           next=current->next;
+           current->next=previous;
+           previous=current;
+           current=next;
+        }
+        first=previous;
+        
+}
 int Search(struct Node*p,int k)
 {
     // struct Node*q=p;
